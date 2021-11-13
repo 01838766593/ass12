@@ -16,7 +16,7 @@ const Header = () => {
                         <Nav.Link as={HashLink} to="/home#home" style={{ margin: '10px', textDecoration: 'none', color: 'white' }} >Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/explore" style={{ margin: '10px', textDecoration: 'none', color: 'white' }} >Explore</Nav.Link>
 
-                        {user?.email ?
+                        {user?.displayName ?
                             <div style={{ width: '400px' }}>
                                 <div class="row">
                                     <div class="col">
@@ -41,7 +41,7 @@ const Header = () => {
                             <NavLink as={Link} to="/login" style={{ margin: '10px', textDecoration: 'none', fontWeight: "bold", color: 'goldenrod' }}
                             >Login</NavLink>}
                         <Navbar.Text>
-                            {user.email &&
+                            {user.displayName &&
                                 <a href="/login" style={{ textDecoration: 'none', paddingLeft: '5px', color: 'yellow', fontWeight: 'bold' }}>User: {user?.displayName}</a>}
                         </Navbar.Text>
                     </Navbar.Collapse>
